@@ -45,6 +45,7 @@ function Welcome () {
 
 						<div className="split extra-space">
 							<div  className="col">
+
 								<img src="#"  />
 								<h3>Pierce</h3>
 							</div>
