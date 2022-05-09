@@ -1,24 +1,9 @@
-*{ 
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 /* my properties */
 
 :root{
@@ -210,8 +195,7 @@ display: none;
 .menu-toggle-icon.activated .close-menu-icon{
 display: block;
 }
-/*   
-search */
+
 .search-form-container {
 width: 100%;
 max-width: 100%;
@@ -241,8 +225,6 @@ text-align: center;
 }
 
 
-
-
 .form-input,
 .form-btn{
   display: inline-block;
@@ -254,8 +236,6 @@ text-align: center;
   border-right: none;
   width: 100%;
   background-color: var(--primary-background-color);
-  
-
 }
 
 .form-btn {
@@ -286,3 +266,4 @@ text-align: center;
 
 
 /* Nav */
+

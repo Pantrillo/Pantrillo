@@ -1,64 +1,62 @@
-import React from "react";
+import '../../index.css';
 
 function Navbar() {
 
 return(
-  
-    <header class="header" id="header">
-      <nav class="navbar container">
+       <header className="header" id="header">
+      <nav className="navbar container">
         <a href="./index.html">
-          <h2 class="logo">Pantrillo</h2>
+          <h2 className="logo">Pantrillo</h2>
         </a>
-          <div class="menu" id="menu">
-        <ul class="list">
-          <li class="list-item">
-            <a href="#" class="list-link current">Home</a>
+          <div className="menu" id="menu">
+        <ul className="list">
+          <li className="list-item">
+            <a href="#" className="list-link current">Home</a>
           </li>
-          <li class="list-item">
-            <a href="/welcome" class="list-link">About</a>
+          <li className="list-item">
+            <a href="/welcome" className="list-link">About</a>
           </li>
-          <li class="list-item">
-            <a href="#" class="list-link">Ing</a>
+          <li className="list-item">
+            <a href="#" className="list-link">Ing</a>
           </li>
-          <li class="list-item">
-                  <a href="#" class="list-link">Meal Planner</a>
+          <li className="list-item">
+                  <a href= "#" className="list-link">Meal Planner</a>
           </li>
-          <li class="list-item">
-                  <a href="#" class="list-link">Pre-made recipes</a>
+          <li className="list-item">
+                  <a href = "#" className="list-link">Pre-made recipes</a>
           </li>
-          <li class="list-item screen-lg-hidden">
-                  <a href="#" class="list-link">Sign in</a>
+          <li className="list-item screen-lg-hidden">
+                  <a href="#" className="list-link">Sign in</a>
           </li>
-          <li class="list-item screen-lg-hidden">
-                  <a href="#" class="list-link">Sign up</a>
+          <li className="list-item screen-lg-hidden">
+                  <a href="#" className="list-link">Sign up</a>
           </li>
         </ul>
           </div>
-          <div class ="list list-right">
-            <button class="btn place-items-center" id="theme-toggle-btn">
-              <i class="ri-sun-line sun-icon"></i>  
-              <i class="ri-moon-line moon-icon"></i> 
+          <div className ="list list-right">
+            <button className="btn place-items-center" id="theme-toggle-btn">
+              <i className="ri-sun-line sun-icon"></i>
+              <i className="ri-moon-line moon-icon"></i>
             </button>
-    
-    
-    
-            
-    <button class="btn place-items-center" id="search-icon">
-      <i class="ri-search-line"></i>
+
+
+
+
+    <button className="btn place-items-center" id="search-icon">
+      <i className="ri-search-line"></i>
     </button>
-      
-    <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
-      <i class="ri-menu-3-line open-menu-icon"></i>  
-      <i class="ri-close-line close-menu-icon"></i>  
+
+    <button className="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+      <i className="ri-menu-3-line open-menu-icon"></i>
+      <i className="ri-close-line close-menu-icon"></i>
     </button>
-      <a href="#" class="list-link screen-sm-hidden">Sign in</a>
-      <a href="#" class="list-link screen-sm-hidden sign-up-btn fancy-border">
+      <a href="#" className="list-link screen-sm-hidden">Sign in</a>
+      <a href="#" className="list-link screen-sm-hidden sign-up-btn fancy-border">
     <span>sign in</span>
     </a>
           </div>
         </nav>
-    </header>  
-    
+    </header>
 )
 }
 
