@@ -1,5 +1,3 @@
-import '../../index.css';
-
 function Navbar() {
 
 return(
@@ -17,7 +15,7 @@ return(
             <a href="/welcome" className="list-link">About</a>
           </li>
           <li className="list-item">
-            <a href="#" className="list-link">Ing</a>
+            <a href="../MealList.js" className="list-link">Ing</a>
           </li>
           <li className="list-item">
                   <a href= "#" className="list-link">Meal Planner</a>
@@ -50,9 +48,9 @@ return(
       <i className="ri-menu-3-line open-menu-icon"></i>
       <i className="ri-close-line close-menu-icon"></i>
     </button>
-      <a href="#" className="list-link screen-sm-hidden">Sign in</a>
+      {/* <a href="#" className="list-link screen-sm-hidden">Sign in</a> */}
       <a href="#" className="list-link screen-sm-hidden sign-up-btn fancy-border">
-    <span>sign in</span>
+    {/* <span>sign in</span> */}
     </a>
           </div>
         </nav>

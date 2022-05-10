@@ -87,7 +87,7 @@ a {
 }
 
 .accent-bg .btn:hover {
-	background: #1A1E26;
+	background: lightgray;
 	color: #fff;
 }
 
@@ -140,4 +140,14 @@ h3 {
 
 .btn:focus {
   outline: 0;
+}
+
+
+
+/* .split-extra-space {
+	margin: 50px auto;
+} */
+
+img {
+	align-items: center;
 }
