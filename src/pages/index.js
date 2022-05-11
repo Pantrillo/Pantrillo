@@ -6,6 +6,8 @@ const Home = () => {
     <>
         <Sidebar />
         <Navbar />
+        <Welcome />
+        <Home />
     </>
   )
 }
