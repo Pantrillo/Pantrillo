@@ -3,6 +3,7 @@ import MealList from "./MealList";
 // import FoodJoke from "./FoodJoke";
 import './MealPlanner.css';
 
+
 function MealPlanner() {
   const [mealData, setMealData] = useState(null); //set to null default
   const [calories, setCalories] = useState(2000); //set to 2000 default

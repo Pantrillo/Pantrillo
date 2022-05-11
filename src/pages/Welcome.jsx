@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar/Navbar.jsx';
+import Navbar from '../components/Navbar/NavbarElements.jsx';
 import './welcome.css';
 import {useEffect} from 'react';
 import FoodJoke from '../components/FoodJoke';
