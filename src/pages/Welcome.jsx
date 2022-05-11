@@ -1,8 +1,8 @@
-import Navbar from '../components/Navbar/Navbar.jsx';
+import Navbar from '../components/Navbar/NavbarElements.jsx';
 import './welcome.css';
 import {useEffect} from 'react';
 import FoodJoke from '../components/FoodJoke';
-import Footer from '../components/Footer.jsx';
+import Footer from '../components/Footer/Footer.jsx';
 
 {/* youll return html, run JS above */}
 
@@ -13,7 +13,7 @@ function Welcome () {
 	{/* JS end */}
 	return (
 		<div>
-			<Navbar />
+			
 				{/* HTML start here */}
 
 				<h1>Welcome!</h1>
@@ -34,7 +34,7 @@ function Welcome () {
 					<br />
 				{/* joke -*/}
 
-					<FoodJoke />
+					{/* <FoodJoke /> */}
 
 				{/* Joke end  */}
 				<section className = "accent-bg">

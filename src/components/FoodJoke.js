@@ -5,7 +5,7 @@ function FoodJoke({data}) {
 	
 	useEffect(() => {
 		fetch(
-			`https://api.spoonacular.com/food/jokes/random?apiKey=ec5faeee615c49b4a1af0ecb0c89bc0a`
+			`https://api.spoonacular.com/food/jokes/random?apiKey=b365a722796f4714ade3978021c8ba93`
 		)
 		.then((response) => response.json())
 		.then((data) => {
@@ -14,12 +14,12 @@ function FoodJoke({data}) {
 			}
 			else {
 				fetch(
-					`https://api.spoonacular.com/food/jokes/random?apiKey=ec5faeee615c49b4a1af0ecb0c89bc0a`
+					`https://api.spoonacular.com/food/jokes/random?apiKey=b365a722796f4714ade3978021c8ba93`
 				)
 				.then((response) => response.json())
 				.then((data) => {
-					setResultMsg(data.text);
-			console.log(data.text)
+				setResultMsg(data.text);
+				console.log(data.text)
 		})
 	}
 

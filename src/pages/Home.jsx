@@ -1,6 +1,7 @@
 import Veggie from "../components/Veggie"
 import Popular from "../components/Popular"
-import Navbar from "../components/Navbar/Navbar"
+import Navbar from "../components/Navbar/NavbarElements"
+import Login from "../pages/LogIn"
 
 
 import React from 'react'

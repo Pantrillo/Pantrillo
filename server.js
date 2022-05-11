@@ -55,7 +55,7 @@ app.post('/login', (req,res) => {
   console.log(findUser)
   await client.close()
 	if (findUser !== null) {
-	  res.redirect('/home.html')
+	  res.redirect('/welcome')
 	} else {
 	  res.redirect('/index.html')
 	}
