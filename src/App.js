@@ -1,10 +1,10 @@
 import {BrowserRouter as Router} from "react-router-dom";
+import Home from './pages'
 
-import Navbar from './components/Navbar'
 import './App.css'
-import Welcome from "./pages/Welcome";
-import Sidebar from "./components/Sidebar";
-import Home from "./pages/Home"
+
+
+
 
 function App() {
   return (
@@ -14,10 +14,10 @@ function App() {
         <Route path = "/welcome" element = {<Welcome />} />
         <Route path = "/login" element = {<LogIn />} />
         <Route path = "/home" element = {<Home />} /> */}
-        <Navbar />
-        <Sidebar />
-        <Welcome />
-        <Home />
+       <Home/>
+        
+        
+        
       </Router>
     
 

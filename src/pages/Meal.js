@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-export default function Meal({meal}) {
+function Meal({meal}) {
 	const [imgUrl, setImgUrl] = useState("");
 
 	useEffect(() => {
