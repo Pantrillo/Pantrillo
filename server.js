@@ -36,7 +36,8 @@ app.post('/users', (req,res) => {
 	await client.close()
   }
   insertUser()
-  res.redirect('/home.html')
+  res.redirect('/Welcome.jsx')
+  // may not be the correct link, changed from home.html
 })
 
 //function to verify log-in data
