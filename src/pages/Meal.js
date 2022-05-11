@@ -30,4 +30,3 @@ function Meal({meal}) {
 	)
 }
 
-export default Meal

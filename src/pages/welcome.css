@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Nunito+Sans&display=swap');
-/* media query */
-/* sources @ bottom after karl */
 
 
 * {
@@ -159,13 +157,14 @@ body {
 
 /* .split-extra-space {
 	margin: 50px auto;
-} */	
+} */
 
 /* scroll*/
 
 html {
   scroll-behavior: smooth;
  }
+
 
 .about {
 	margin: 65px;

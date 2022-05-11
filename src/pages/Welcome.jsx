@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar/NavbarElements.jsx';
 import './welcome.css';
 import FoodJoke from '../components/FoodJoke';
 import Footer from '../components/Footer/Footer.jsx';
+
 {/* youll return html, run JS above */}
 
 function Welcome () {

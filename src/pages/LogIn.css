@@ -14,7 +14,7 @@ body {
   justify-content: center;
 }
 
-h1 {
+.lgin {
   color: #F98E04;
   text-shadow: 0 0 3px #9B9B9B;
   text-align: center;
@@ -148,4 +148,14 @@ button:hover {
 
 .checked {
   position: absolute;
+}
+
+#lgImg {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("/src/img/lgimg.png") no-repeat center center;
 }
