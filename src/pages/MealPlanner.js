@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import MealList from "./MealList";
-import FoodJoke from "./FoodJoke";
+// import FoodJoke from "./FoodJoke";
 import './MealPlanner.css';
 
 function MealPlanner() {
@@ -25,7 +25,7 @@ function MealPlanner() {
   }
   return (
     <div className="App">
-
+// why named App?
       <section className="controls">
         <input type="number"
         placeholder="Calories (e.g. 2000)"

@@ -35,7 +35,7 @@ button {
   background-color: #038ED7;
   color: #f3f3f3;
   border: none;
-  border-radius: 8px; 
+  border-radius: 8px;
   font-family: "roboto", sans-serif;
   font-size: 1rem;
 }
@@ -92,7 +92,7 @@ article {
 
 a {
   text-decoration: none;
-  background-color: #038ED7; 
+  background-color: #038ED7;
   color: #f3f3f3;
   width: fit-content;
   padding: 0.5rem 1rem;
@@ -109,7 +109,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .nutrition ul {
     display: flex;
     flex-direction: column;

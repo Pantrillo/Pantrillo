@@ -1,4 +1,5 @@
 import {useEffect} from 'react'
+import './LogIn.css'
 {/* import LogIn from "LogIn"; */}
 
 function LogIn() {
@@ -52,15 +53,16 @@ useEffect(() => {
 {/* JS start here */}
 
   return (
-    <div>
-{/* html start here */}
-
 <div className="body">
+    {/* <div id = "lgImg"> */}
 
     <div id="log-in-overlay">
       <div id="log-in-modal">
-
+          <div className = "log">
+            <div className = "lgin">
         <h2>Log in information</h2>
+              </div>
+{/* change h2 */}
 
       <div className="row-center">
           <form action="/login" method="post">
@@ -81,9 +83,10 @@ useEffect(() => {
 
   <div id="sign-up-overlay">
     <div id="sign-up-modal">
-
-      <h2>Sign Up</h2>
-
+      <div className = "lgin">
+     <h2>Sign Up</h2>
+          </div>
+{/* change h2 */}
       <div className="row-center">
         <form action="/users" method="post">
           <input id="sign-up-email-input" name="email" placeholder="Email" />
@@ -129,5 +132,4 @@ useEffect(() => {
   )
 
 }
-
 export default LogIn

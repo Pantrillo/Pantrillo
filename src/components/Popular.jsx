@@ -8,13 +8,13 @@ import '@splidejs/splide/dist/css/splide.min.css';
 function Popular() {
 
   const [popular, setPopular] = useState([])  //create variable, function to modify, useState to define what kind of data you have
-  
+
   useEffect(() => {
-  getPopular()      
+  getPopular()
 
 
   },[]);
-    
+
 
   const getPopular = async () => { //wait for data before you render anything out
 
@@ -31,7 +31,7 @@ function Popular() {
       localStorage.setItem('popular', JSON.stringify(data.recipes)) //localstorage can only save strings/stringify
       setPopular(data.recipes)
       console.log(data.recipes)
-    } 
+    }
   }
   return(
   <div>
@@ -56,7 +56,7 @@ function Popular() {
           );
         })}
          </Splide>
-      </Wrapper> 
+      </Wrapper>
       </div>
     )
 }
@@ -64,7 +64,7 @@ function Popular() {
 const Wrapper = styled.div`
   margin: 4rem 0rem;
   `;
-  
+
 const Card = styled.div`
   min-height: 25rem;
   border-radius: 2rem;
