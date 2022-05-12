@@ -17,9 +17,9 @@ import FoodJoke from '../components/FoodJoke'
     <>
         <Sidebar isOpen={isOpen} toggle={toggle}/>
         <Navbar toggle={toggle}/>
-        <Popular />
+        
         <Welcome />
-        <FoodJoke />  
+        <FoodJoke />
     </>
   )
 }

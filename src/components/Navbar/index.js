@@ -25,12 +25,12 @@ const Navbar = ({ toggle }) => {
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to='/home'>Home</NavLinks>
+                        <NavLinks to='home'>Home</NavLinks>
 
                     </NavItem>
 
                     <NavItem>
-                        <NavLinks to='/about'>
+                        <NavLinks to='about'>
                             About
                         </NavLinks>
                         
@@ -44,7 +44,7 @@ const Navbar = ({ toggle }) => {
                     </NavItem>
 
                     <NavItem>
-                        <NavLinks to='about'>
+                        <NavLinks to='/about'>
                             Sign Up
                         </NavLinks>
                         

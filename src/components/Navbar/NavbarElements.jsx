@@ -26,7 +26,6 @@ export const NavbarContainer = styled.div`
     width: 100%;
     padding: 0 24px;
     max-width: 1200px;
-
 `
 
 export const NavLogo = styled(LinkRouter)`
