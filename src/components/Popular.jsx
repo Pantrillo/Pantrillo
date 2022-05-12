@@ -69,7 +69,6 @@ const Card = styled.div`
   min-height: 25rem;
   border-radius: 2rem;
   overflow: hidden;
-  background-color: red;
   position: relative;
 
   img {
@@ -96,6 +95,7 @@ const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
 
   }
 `;

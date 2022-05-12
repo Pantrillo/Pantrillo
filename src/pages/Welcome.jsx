@@ -12,8 +12,6 @@ function Welcome () {
 	return (
 		<div>
 				{/* HTML start here */}
-			<Navbar />
-
 <section className = "welc">
 	<div id = "background-img">
 		<div className = "h1">

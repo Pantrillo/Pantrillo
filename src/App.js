@@ -4,7 +4,6 @@ import LogIn from './pages/LogIn';
 import Welcome from './pages/Welcome';
 import MealPlanner from './pages/MealPlanner.js';
 
-
 function App() {
   return (
     <BrowserRouter>
