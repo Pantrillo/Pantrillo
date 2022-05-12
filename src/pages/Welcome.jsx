@@ -3,6 +3,7 @@ import './welcome.css';
 import {useEffect} from 'react';
 import FoodJoke from '../components/FoodJoke';
 import Footer from '../components/Footer.jsx';
+import LogIn from './LogIn'
 
 {/* youll return html, run JS above */}
 

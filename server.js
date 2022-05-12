@@ -8,7 +8,7 @@ const url = "mongodb+srv://krshinn:pickspicks@cluster0.oam60.mongodb.net/myFirst
 const client = new MongoClient(url)
 
 
-app.use(express.static('public'))  //allows you to pass json data from front end to back end
+app.use(express.static('build'))  //allows you to pass json data from front end to back end
 app.use(express.urlencoded({extended:true})) //allows you to access req.body
 
 
@@ -35,8 +35,9 @@ app.post('/users', (req,res) => {
 	await collection.insertOne(user)
 	await client.close()
   }
+  console.log("button clicked")
   insertUser()
-  res.redirect('/Welcome.jsx')
+  res.redirect('./Welcome.jsx')
   // may not be the correct link, changed from home.html
 })
 
@@ -89,6 +90,13 @@ app.get('/api', (req,res) => {
   }
   postRecipe()
 })
+  
+  
+  app.get('*', (req,res)=> {
+  res.sendFile(__dirname + "/build/index.html")
+})
+
+
 
 
 app.listen(port)

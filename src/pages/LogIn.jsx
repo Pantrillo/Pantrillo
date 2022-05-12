@@ -1,7 +1,11 @@
 import {useEffect} from 'react'
+import Welcome from './Welcome';
+import { Link } from 'react-router-dom';
+import './LogIn.css';
+
 {/* import LogIn from "LogIn"; */}
 
-function LogIn() {
+function LogIn(){
   {/* JS start here */}
 
   // password
@@ -55,73 +59,74 @@ useEffect(() => {
     <div>
 {/* html start here */}
 
-<div className="body">
-
+<div className="body"> 
+  
+  {/* <!--   Log in modal begins here --> */}
     <div id="log-in-overlay">
       <div id="log-in-modal">
-
+        
         <h2>Log in information</h2>
-
-      <div className="row-center">
-          <form action="/login" method="post">
-            <input id="email-input" name="email" placeholder="Email" />
+  
+        <div className="row-center">
+          <form action="/users" method="post">
+            <input id="email-input" name="email" placeholder="Email"/>
             <br />
-
-            <input id="password-input" name="password" placeholder="Password" type = "password" />
-            <input type ="checkbox" onClick = {toggleHidePass} className = "checked" />
+            <input id="password-input" name="password" placeholder="Password"/>
+          </form>
+        </div>
         <br />
         <button id="log-in">Log In</button>
-        </form>
-     </div>
         <button id="close-modal-li">Back</button>
-          <br />
-        <div id="error"></div>
+        
       </div>
     </div>
-
+    {/* <!--  Log in modal ends here --> */}
+    
+    {/* <!--   Sign Up modal begins here --> */}
   <div id="sign-up-overlay">
     <div id="sign-up-modal">
-
+      
       <h2>Sign Up</h2>
-
+  
       <div className="row-center">
-        <form action="/users" method="post">
-          <input id="sign-up-email-input" name="email" placeholder="Email" />
+        <form action="/api" method="post">
+          <input id="sign-up-email-input" name="email" placeholder="Email"/>
           <br />
-          <input id="sign-up-password-input" name="password" placeholder="Password" type = "password" />
-          <input type ="checkbox" onClick = {toggleHidePassSignUp} className = "checked" />
+          <input id="sign-up-password-input" name="password" placeholder="Password"/>
+        </form>
+      </div>
       <br />
       <button id="submit">Submit</button>
-      </form>
-  </div>
       <button id="close-modal-su">Back</button>
-
+      
     </div>
   </div>
+  {/* <!--  Sign Up modal ends here --> */}
 
+  
+{/* <!-- Log In / Sign Up / Guest Buttons begin here --> */}
   <div className="container-box">
-
-      <h1>Pantrillo</h1>
+      
         <div className="row-center">
           <div className="logo"></div>
         </div>
         <br />
 
       <div className="row-center">
-        <a href="/welcome"><button id="log-in-button"><h4>Log In</h4></button></a>
+        <button id="log-in-button"><h4>Log In</h4></button>
     </div>
 
-
+    
       <div className="row-center">
         <button id="sign-up-button"><h4>Sign Up</h4></button>
       </div>
 
-
+    
       <div className="row-center">
-        <a href="/welcome"><button className="Guest"><h4>Guest</h4></button></a>
+        <Link to="/Welcome"><button id="guest"><h4>Guest</h4></button></Link>
       </div>
   </div>
-
+{/* <!-- Log In / Sign Up / Guest Buttons end here --> */}
 </div>
 
 {/* html end here */}
