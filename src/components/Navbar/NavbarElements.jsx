@@ -3,7 +3,7 @@ import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
 export const Nav = styled.nav`
-    background: #000;
+    background: #4C5B5F;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -26,11 +26,10 @@ export const NavbarContainer = styled.div`
     width: 100%;
     padding: 0 24px;
     max-width: 1200px;
-
 `
 
 export const NavLogo = styled(LinkRouter)`
-color: #fff;
+    color: #fff;
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -49,7 +48,7 @@ export const MobileIcon = styled.div`
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-100%, 60%);
+        transform: translate(-100%, 50%);
         font-size: 1.8rem;
         cursor: pointer;
         color: #fff;
@@ -95,10 +94,10 @@ export const NavBtn = styled.nav`
 `
 export const NavBtnLink = styled(LinkRouter)`
 border-radius: 50px;
-background: #01bf71;
+background: #ADAEFF;
 white-space: nowrap;
 padding: 10px 22px;
-color: #010606;
+color: #fff;
 font-size: 16px;
 outline: none;
 border: none;
@@ -109,8 +108,8 @@ text-decoration: none;
 
 &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: #EBD489;
+    color: #fff;
 }
 `
 export default Nav

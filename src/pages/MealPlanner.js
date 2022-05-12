@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import MealList from "./MealList";
-import FoodJoke from "./FoodJoke";
 import './MealPlanner.css';
 
 function MealPlanner() {
