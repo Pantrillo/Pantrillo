@@ -1,10 +1,9 @@
 import {useEffect} from 'react'
 import './LogIn.css'
-{/* import LogIn from "LogIn"; */}
+
 
 
 function LogIn() {
-  {/* JS start here */}
 
   // password
   function toggleHidePass() {
@@ -44,14 +43,6 @@ useEffect(() => {
     document.getElementById("sign-up-overlay").style.display= "none"
   })
 }, [])
-
-  const button = document.createElement('Home');
-
-  button.addEventListener('click', event => {
-    button.textContent = `Click count: ${event.detail}`;
-  });
-
-{/* JS start here */}
 
   return (
 <div className="body">
@@ -102,6 +93,7 @@ useEffect(() => {
 
     </div>
   </div>
+</div>
 
   <div className="container-box">
 
@@ -126,7 +118,6 @@ useEffect(() => {
       </div>
   </div>
 
-</div>
 
 {/* html end here */}
     </div>
