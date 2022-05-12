@@ -6,21 +6,23 @@ import Popular from '../components/Popular'
 import Welcome from './Welcome'
 import FoodJoke from '../components/FoodJoke'
 
-  const Home = () => {
+const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
-    setIsOpen(!isOpen)
+	setIsOpen(!isOpen)
   }
 
+
   return (
-    <>
-        <Sidebar isOpen={isOpen} toggle={toggle}/>
-        <Navbar toggle={toggle}/>
-        
-        <Welcome />
-        <FoodJoke />
-    </>
+	<>
+		<Sidebar isOpen={isOpen} toggle={toggle}/>
+		<Navbar toggle={toggle}/>
+		<Popular />
+		<Welcome />
+		<FoodJoke />
+
+	</>
   )
 }
 

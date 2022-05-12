@@ -3,33 +3,19 @@ import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
 export const Nav = styled.nav`
-    background: #4C5B5F;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+	background: #4c5b5f;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 
-    @media screen and (max-width: 960px) {
-        transition: 0.8s all ease;
-    }
-`
-export const MobileIcon = styled.div`
-    display: none;
-
-    @media screen and (max-width: 768px) {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 50%);
-        font-size: 1.8rem;
-        cursor: pointer;
-        color: #fff;
-    }
+	@media screen and (max-width: 960px) {
+		transition: 0.8s all ease;
+	}
 `
 export const NavbarContainer = styled.div`
 	display: flex;
@@ -53,6 +39,21 @@ color: #fff;
 	font-weight: bold;
 	text-decoration: none;
 `;
+
+export const MobileIcon = styled.div`
+	display: none;
+
+	@media screen and (max-width: 768px) {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(-100%, 50%);
+		font-size: 1.8rem;
+		cursor: pointer;
+		color: #fff;
+	}
+`
 
 export const NavMenu = styled.ul`
 	display: flex;

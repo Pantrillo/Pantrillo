@@ -4,7 +4,6 @@ import Welcome from './pages/Welcome';
 import './App.css'
 import MealPlanner from './pages/MealPlanner.js';
 
-
 function App() {
   return (
 
@@ -18,8 +17,6 @@ function App() {
         <Route path = "/" element = {<LogIn />} />
         <Route path = "/welcome" element = {<Welcome />} />
         <Route path = "/MealList" element = {<MealPlanner />} />
-
-
       </Routes>
     </BrowserRouter>
 
