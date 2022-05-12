@@ -18,7 +18,7 @@ function Welcome () {
 
 				<h1>Welcome!</h1>
 						<h2> {name} </h2>
-
+					{/*
 						<p>
 							Things to keep in mind when meal planning
 						</p>
@@ -31,33 +31,19 @@ function Welcome () {
 						  <li> Remember! Low fat doesn't always equal healthy 😉. Use plant based oils in moderation. </li>
 						  <li>Plan food prep in moderation, you deserve to eat fresh food 😁</li>
 						</ul>
-					<br />
+					<br /> */}
 				{/* joke -*/}
 
 					{/* <FoodJoke /> */}
 
 				{/* Joke end  */}
+
 				<section className = "accent-bg">
 					<br />
 						<h2>About Pantrillo</h2>
 						<p>
 							Pantrillo started in early 2022 after the three founders, Pierce, Isabelle and Karl, met in an intensive college course where many conversations circled around how difficult it became to sit and eat dinner after the classes were all done. </p> <p> Whether the struggle came from not having the time to shop or energy to cook, we all realized it was an issue for almost everyone in the course. With that realization, the founders set out to help the busy-bodies, like them, all around the world with the hope of ensuring a healthy and easy meal for everybody. </p>
 
-						<div className="split extra-space">
-							<div  className="col">
-
-								<img src="#"  />
-								<h3>Pierce</h3>
-							</div>
-							<div  className="col">
-								<img src="#"  />
-								<h3>Isabelle</h3>
-							</div>
-							<div  className="col">
-								<img src="#"  />
-								<h3>Karl</h3>
-								</div>
-				</div>
 				</section>
 				<br />
 				<br />

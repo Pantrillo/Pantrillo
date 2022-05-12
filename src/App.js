@@ -1,22 +1,28 @@
-import {BrowserRouter as Router} from "react-router-dom";
-
-import Navbar from './components/Navbar'
+import Home from "./pages/Home"
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import LogIn from './pages/LogIn';
+import Welcome from './pages/Welcome';
 import './App.css'
-import Welcome from "./pages/Welcome";
-import Sidebar from "./components/Sidebar";
+
 
 function App() {
   return (
+
    
-      <Router>
-        {/* <Route path = "/" element = {<LogIn />} />
+      
+        
+
+    <BrowserRouter>
+      <Routes>
+        
+
         <Route path = "/welcome" element = {<Welcome />} />
         <Route path = "/login" element = {<LogIn />} />
-        <Route path = "/home" element = {<Home />} /> */}
+        <Route path = "/home" element = {<Home />} />
 
-        <Home />
-      </Router>
-    
+        
+      </Routes>
+    </BrowserRouter>
 
   )
 }
