@@ -1,7 +1,12 @@
 import {useEffect} from 'react'
 import './LogIn.css'
 
+/* Isabelle commented out, need to give button fnction - look @ discord for more info */
+/* const button = document.createElement('Home');
 
+button.addEventListener('click', event => {
+  button.textContent = `Click count: ${event.detail}`;
+}); */
 
 function LogIn() {
 
