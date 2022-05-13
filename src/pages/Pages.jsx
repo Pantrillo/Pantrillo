@@ -1,4 +1,4 @@
-import React from 'react'
+{/* import React from 'react'
 import Home from './Home'
 import Welcome from './Welcome'
 import LogIn from './LogIn'
@@ -15,4 +15,4 @@ function Pages() {
 }
 export default Pages
 
-{/* What is pages: We can add all our views, will go into the nav bar */}
+{/* What is pages: We can add all our views, will go into the nav bar */} */}

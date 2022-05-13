@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Home from '../pages/index.js';
 import MealList from "./MealList";
 import './MealPlanner.css';
 
@@ -25,16 +26,19 @@ function MealPlanner() {
   }
   
   return (
-    <div className="App">
-      <div className="cont">
-        <span className="title"><h1>Meal Planner</h1></span>
-        <section className="controls">
-        <input class="cal-input" type="number" 
-        placeholder="Calories (e.g. 2000)" 
-        onChange={handleChange} />
-        </section>
-      <button class="meal-button" onClick={getMealData}>Get Daily Meal Plan</button>
-      {mealData && <MealList mealData={mealData} />}
+    <div>
+      <Home />
+      <div className="App">
+        <div className="cont">
+          <span className="title"><h1>Meal Planner</h1></span>
+          <section className="controls">
+          <input class="cal-input" type="number" 
+          placeholder="Calories (e.g. 2000)" 
+          onChange={handleChange} />
+          </section>
+        <button class="meal-button" onClick={getMealData}>Get Daily Meal Plan</button>
+        {mealData && <MealList mealData={mealData} />}
+        </div>
       </div>
     </div>
   );

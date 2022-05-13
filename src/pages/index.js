@@ -18,9 +18,6 @@ const Home = () => {
 	<>
 		<Sidebar isOpen={isOpen} toggle={toggle}/>
 		<Navbar toggle={toggle}/>
-		<Popular />
-		<Welcome />
-		<FoodJoke />
 
 	</>
   )

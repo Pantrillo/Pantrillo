@@ -10,6 +10,8 @@
 }
 
 .cont {
+  background-color: white;
+  border: 1px solid black;
   width: 800px;
   padding: 2rem;
   margin: 2rem;
@@ -95,15 +97,6 @@ button:hover {
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
-
-/* a {
-  text-decoration: none;
-  background-color: #038ED7; 
-  color: #f3f3f3;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  border-radius: 8px; 
-} */
 
 a:hover {
   cursor: pointer;
