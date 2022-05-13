@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import LogIn from './pages/LogIn.jsx';
 import Welcome from './pages/Welcome.jsx';
-import Home from './pages/index.js';
+import Navbar from './pages/index.js';
 import './App.css'
 import MealPlanner from './pages/MealPlanner.js';
 

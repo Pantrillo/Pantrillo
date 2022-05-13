@@ -1,5 +1,4 @@
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
+import Navbar from '../pages/index.js';
 import './welcome.css';
 import FoodJoke from '../components/FoodJoke';
 import Footer from '../components/Footer/Footer.jsx';
@@ -12,8 +11,7 @@ function Welcome () {
 	return (
 		<div>
 				{/* HTML start here */}
-		<Sidebar />
-		<Navbar />
+			<Navbar />
 			
 
 
@@ -29,11 +27,13 @@ function Welcome () {
 			<FoodJoke />
 		</div>
 	
+		<div id="about-container">
 		<div id="about">
 			<h2>About Pantrillo</h2>
 			<section>
 				<p>Pantrillo started in early 2022 after the three founders, Pierce, Isabelle and Karl, met in an intensive college course where many conversations circled around how difficult it became to sit and eat dinner after the classes were all done. </p> <p> Whether the struggle came from not having the time to shop or energy to cook, we all realized it was an issue for almost everyone in the course. With that realization, the founders set out to help the busy-bodies, like them, all around the world with the hope of ensuring a healthy and easy meal for everybody. </p>
 			</section>
+		</div>
 		</div>
 		
 			<hr />

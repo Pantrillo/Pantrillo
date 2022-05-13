@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Home from '../pages/index.js';
+import Navbar from '../pages/index.js';
 import MealList from "./MealList";
 import './MealPlanner.css';
 
@@ -27,7 +27,7 @@ function MealPlanner() {
   
   return (
     <div>
-      <Home />
+      <Navbar />
       <div className="App">
         <div className="cont">
           <span className="title"><h1>Meal Planner</h1></span>
