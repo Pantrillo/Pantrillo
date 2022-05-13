@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Nunito+Sans&display=swap');
+/* media query */
+/* sources @ bottom after karl */
+
+
 
 * {
 	box-sizing: border-box;
-
 }
 
 html, body {
@@ -14,57 +17,55 @@ img {
 	max-width: 100%;
 }
 
-/* body {
+body {
 	font-family: 'PT Sans', sans-serif;
 	line-height: 1.6;
 	color: #fff;
-	background: #1A1E26;
+	background: lightcyan;
 	font-size: 21px;
-} */
+}
 
-/* .text-center {
+.text-center {
 	text-align: center;
 }
 
-p {
+/* p {
 	padding-left: 60px;
-}
+} */
 
-h1, h2, h3 {
+.h1, .h2 {
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 900;
 }
 
-h1 {
-	font-size: 120px;
+.h1 {
+	font-size: 90px;
 	line-height: .8;
 }
 
-h2 {
+.h2About {
 	font-size: 48px;
 	line-height: 1;
-}
-
-h2 {
 	display: block;
 }
 
-h4{
+.h4Footer {
 	font-size: 15px;
 	font-family: 'Montserrat', sans-serif;
 	padding-right: 50px;
 	padding-left: 50px;
-} */
-
-.sources {
-	align-items: center;
-	display: flex;
-	font-size: 15px;
-	justify-content: space-around;
 }
 
-a {
+.sources {
+	text-align: center;
+	align-items: center;
+	/* display: flex; */
+	font-size: 15px;
+	/* justify-content: space-around; */
+}
+
+.h4Footer {
 	color: #F98E04;
 }
 
@@ -79,6 +80,7 @@ a {
 
 .accent-bg {
 	background-color: #3669C9;
+	padding: 40px;
 }
 
 .accent-bg .btn {
@@ -107,20 +109,34 @@ a {
   margin-left: 200px;
 }
 
-h3 {
-  margin: 0;
+.h3Bio {
   opacity: 0.5;
   letter-spacing: 2px;
-  color: black;
+  color: #3669C9;
+  background-color: lavender;
+  /*  */
+  display: flex;
+  /* flex-wrap: wrap; */
+  column-gap: 60px;
+  padding: 30px;
 }
 
+
 .joke {
-	color: black;
-  font-size: 30px;
+  text-indent: 70px;
+  font-size: 20px;
   letter-spacing: 1px;
-  line-height: 40px;
-  margin: 50px auto;
+  line-height: 30px;
+  margin: 20px auto;
   max-width: 100%;
+  color: #F98E04;
+  padding: 15px;
+}
+
+.link {
+	justify-content: space-between;
+	 align-items: center;
+	 text-align: center;
 }
 
 .btn {
@@ -142,12 +158,41 @@ h3 {
   outline: 0;
 }
 
-
-
 /* .split-extra-space {
 	margin: 50px auto;
 } */
 
-img {
+/* scroll*/
+
+html {
+  scroll-behavior: smooth;
+ }
+
+
+.about {
+	margin: 65px;
+	text-align: justify;
+	justify-content: center;
+	flex-direction: column;
+	text-decoration: none;
+	color: #F98E04;
+	padding: 40px;
+
+}
+
+#background-img {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	background: url("/src/img/kitchen.jpeg") no-repeat center center;
+}
+
+@media only screen and (max-width: 650px) {
+  .welc {
+	flex-direction: column;
+	align-items: center;
+  }
 }
