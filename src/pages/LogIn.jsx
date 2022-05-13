@@ -8,8 +8,8 @@ import './LogIn.css';
 function LogIn(){
   {/* JS start here */}
 
-  // password
-  function toggleHidePass() {
+  // password 
+  function toggleHidePass(){
     let x = document.getElementById("password-input")
     if (x.type === "password") {
   x.type = "text";
@@ -19,7 +19,7 @@ function LogIn(){
   }
 
   // signup pass
-  function toggleHidePassSignUp() {
+  function toggleHidePassSignUp() { 
     let x = document.getElementById("sign-up-password-input")
     if (x.type === "password") {
   x.type = "text";
@@ -47,11 +47,7 @@ useEffect(() => {
   })
 }, [])
 
-  const button = document.createElement('Home');
 
-  button.addEventListener('click', event => {
-    button.textContent = `Click count: ${event.detail}`;
-  });
 
 {/* JS start here */}
 
@@ -65,17 +61,18 @@ useEffect(() => {
     <div id="log-in-overlay">
       <div id="log-in-modal">
         
-        <h2>Log in information</h2>
+        <h3>Log in information</h3>
   
         <div className="row-center">
-          <form action="/users" method="post">
+          <form action="/login" method="post">
             <input id="email-input" name="email" placeholder="Email"/>
             <br />
             <input id="password-input" name="password" placeholder="Password"/>
+          <input id="checkbox" type ="checkbox" onClick = {toggleHidePass} className = "checked" />
+        <button id="log-in">Log In</button>
           </form>
         </div>
         <br />
-        <button id="log-in">Log In</button>
         <button id="close-modal-li">Back</button>
         
       </div>
@@ -86,17 +83,18 @@ useEffect(() => {
   <div id="sign-up-overlay">
     <div id="sign-up-modal">
       
-      <h2>Sign Up</h2>
+      <h3>Sign Up</h3>
   
       <div className="row-center">
-        <form action="/api" method="post">
+        <form action="/users" method="post">
           <input id="sign-up-email-input" name="email" placeholder="Email"/>
           <br />
           <input id="sign-up-password-input" name="password" placeholder="Password"/>
+        <input id="checkbox" type ="checkbox" onClick = {toggleHidePass} className = "checked" />
+      <button id="submit">Submit</button>
         </form>
       </div>
       <br />
-      <button id="submit">Submit</button>
       <button id="close-modal-su">Back</button>
       
     </div>

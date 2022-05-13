@@ -14,15 +14,15 @@ img {
 	max-width: 100%;
 }
 
-body {
+/* body {
 	font-family: 'PT Sans', sans-serif;
 	line-height: 1.6;
 	color: #fff;
 	background: #1A1E26;
 	font-size: 21px;
-}
+} */
 
-.text-center {
+/* .text-center {
 	text-align: center;
 }
 
@@ -55,7 +55,7 @@ h4{
 	font-family: 'Montserrat', sans-serif;
 	padding-right: 50px;
 	padding-left: 50px;
-}
+} */
 
 .sources {
 	align-items: center;
