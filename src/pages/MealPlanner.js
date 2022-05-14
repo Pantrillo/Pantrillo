@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Navbar from '../pages/index.js';
 import MealList from "./MealList";
-import './MealPlanner.css';
+// import './MealPlanner.css';
 
 function MealPlanner() {
   const [mealData, setMealData] = useState(null); //set to null default
@@ -13,7 +13,7 @@ function MealPlanner() {
   
   function getMealData() {
     fetch(
-      `https://api.spoonacular.com/mealplanner/generate?apiKey=dc278d39f926447f9f01c6c2a958f3be&timeFrame=day&targetCalories=${calories}`
+      `https://api.spoonacular.com/mealplanner/generate?apiKey=dc13f61c52a34390aca099bc71a28778&timeFrame=day&targetCalories=${calories}`
     ) //search meal plan by day and passing in state of calories
     .then((response) => response.json())
     .then((data) => {
@@ -27,20 +27,20 @@ function MealPlanner() {
   
   return (
     <div>
-      <Navbar />
+    <Navbar />
       <div className="App">
         <div className="cont">
-          <span className="title"><h1>Meal Planner</h1></span>
-          <section className="controls">
-          <input class="cal-input" type="number" 
-          placeholder="Calories (e.g. 2000)" 
-          onChange={handleChange} />
-          </section>
-        <button class="meal-button" onClick={getMealData}>Get Daily Meal Plan</button>
+          <h1>Meal Planner</h1>
+          <p>Make your day easier by letting our API plan your meals<br />
+          Input the amount of calories you would like to consume and leave the rest to us</p>
+          <input className="cal-input" type="number" 
+            placeholder="Calories (e.g. 2000)" 
+            onChange={handleChange} />
+        <button className="meal-button" onClick={getMealData}>Get Daily Meal Plan</button>
         {mealData && <MealList mealData={mealData} />}
         </div>
       </div>
-    </div>
+      </div>
   );
 }
 

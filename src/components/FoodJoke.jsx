@@ -7,7 +7,7 @@ function FoodJoke() {
 		//fetch from the API
 		async function fetchJoke(){ 
 			const response = await fetch(
-			`https://api.spoonacular.com/food/jokes/random?apiKey=dc278d39f926447f9f01c6c2a958f3be`
+			`https://api.spoonacular.com/food/jokes/random?apiKey=ec5faeee615c49b4a1af0ecb0c89bc0a`
 			)
 			const data = await response.json()
 			return data.text

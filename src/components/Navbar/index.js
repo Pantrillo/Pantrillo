@@ -37,8 +37,8 @@ const Navbar = ({ toggle }) => {
 					</NavItem>
 
 					<NavItem>
-						<NavLinks to='/SearchedRecipes'>
-							Sign Up
+						<NavLinks to='/Mixology'>
+							Mixology
 						</NavLinks>
 
 					</NavItem>
