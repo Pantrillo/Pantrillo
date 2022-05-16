@@ -1,4 +1,4 @@
-import Navbar from '../pages/index.js';
+import Nav from '../pages/index.js';
 import FoodJoke from '../components/FoodJoke';
 import Footer from '../components/Footer/Footer.jsx';
 {/* youll return html, run JS above */}
@@ -10,7 +10,7 @@ function Welcome () {
 	return (
 		<div>
 			
-			<Navbar />
+			<Nav />
 
 		<div className= "welc-hero">
 			<h1>Welcome!</h1>

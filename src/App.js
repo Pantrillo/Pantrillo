@@ -1,8 +1,9 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import LogIn from './pages/LogIn.jsx';
 import Welcome from './pages/Welcome.jsx';
-import Navbar from './pages/index.js';
+import Nav from './pages/index.js';
 import Mixology from './pages/Mixology.jsx';
+import Pantry from './pages/Pantry.jsx';
 import './App.css'
 import MealPlanner from './pages/MealPlanner.js';
 
@@ -15,6 +16,7 @@ function App() {
         <Route path = "/welcome" element = {<Welcome />} />
         <Route path = "/MealPlanner" element = {<MealPlanner />} />
         <Route path = "/Mixology" element = {<Mixology />} />
+        <Route path = "/Pantry" element = {<Pantry />} />
       </Routes>
     </BrowserRouter>
 

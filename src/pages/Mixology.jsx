@@ -1,27 +1,41 @@
 import React, { useState, useEffect } from "react";
+import Footer from '../components/Footer/Footer.jsx';
 import Navbar from '../pages/index.js';
-import './Mixology.css';
 
 function Mixology() {
 	  const [cocktails, setCocktails] = useState([])
 
   function Search() {
 		const searchBar = document.getElementById('search-bar')
+			try {
+				fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + searchBar.value)
+				.then((results) => results.json())
+				.then((data) => {
+					  console.log("hello" + data.drinks)
+			if(data.drinks === null) {
+				document.getElementById('err').innerText = "Sorry, it looks like thats not available. Try something else."
+							setCocktails([])
+			} else {
+				document.getElementById('err').innerHTML = ''
+				setCocktails(data.drinks)
+						}
+					})
+			  }
+			catch(error) {
+			  console.error(error)
 
-		fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + searchBar.value)
-		.then((results) => results.json())
-		.then((data) => {
-		  setCocktails(data.drinks)
-		})
-  }
-
+			  }
+			}
   return (
 	<div>
 		<Navbar />
-   		<input id = "search-bar" />
-   		<button onClick = {Search}> Search . . . </button>
-		
-	 		{cocktails.map((drink) => {
+				<div className = "mix-app">
+			<div className= "contain">
+		<h1 className = "poison"> Select your poison 🍹 </h1>
+		   <input id = "search-bar" />
+		   <button className = "mix-btn" onClick = {Search}> Search . . . </button>
+		   <div id = "err"> </div>
+			 {cocktails.map((drink) => {
 				const {idDrink, strDrink, strDrinkThumb, strCategory, strGlass, strInstructions, strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5} = drink;
 				const ingredient = [strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5].filter(item => item !== null).join(', ')
 
@@ -36,6 +50,9 @@ function Mixology() {
 		)
 	  })}
 	</div>
+		</div>
+		<Footer />
+			</div>
   )
 }
 

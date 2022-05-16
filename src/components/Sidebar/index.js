@@ -18,12 +18,13 @@ const Sidebar = ({ isOpen, toggle }) => {
 		<SidebarWrapper>
 			<SidebarMenu>
 			   
-				<SidebarLink to="about">About</SidebarLink>
-				<SidebarLink to="mealplanner">Meal Planner</SidebarLink>
-				<SidebarLink to="signup">Sign Up</SidebarLink>
+				<SidebarLink to="/Welcome">Home</SidebarLink>
+				<SidebarLink to="/Pantry">Pantry</SidebarLink>
+				<SidebarLink to="/MealPlanner">Meal Planner</SidebarLink>
+				<SidebarLink to="/Mixology">Mixology</SidebarLink>
 			</SidebarMenu>
 			<SideBtnWrap>
-				<SidebarRoute to="/signin">Sign In</SidebarRoute>
+				<SidebarRoute to="/Login">Sign Up</SidebarRoute>
 			</SideBtnWrap>
 		</SidebarWrapper>
 	</SidebarContainer>

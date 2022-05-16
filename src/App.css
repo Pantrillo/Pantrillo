@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Nunito+Sans&display=swap');
   
 *, html, body {
+  margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.6;
 	scroll-behavior: smooth;
@@ -23,6 +24,7 @@
 	text-align: center;
 	font-weight: 900;
 	font-size: 90px;
+  color: orange;
 	display: block;
 }
   
@@ -39,10 +41,10 @@
 	cursor: pointer;
  }
 .welcome-btn:hover {
-  cursor: pointer;
-  background-color: #0068a9;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
- }
+   transition: all .2s ease-in-out;
+   background: #fff;
+   color: #010606;
+  }
  
  .row {
 	  display: flex;
@@ -137,10 +139,10 @@
  
  .App {
    background: url("/src/img/kitchen.jpeg") no-repeat center;
+   background-attachment: fixed;
    display: flex;
    align-items: center;
    flex-direction: column;
-   /* height: 1400px; */
  }
  
  .cont {
@@ -181,7 +183,13 @@
    border: none;
    border-radius: 8px; 
    font-size: 1rem;
+   cursor: pointer;
  }
+ .meal-button:hover {
+   transition: all .2s ease-in-out;
+   background: #8df;
+   color: #010606;
+  }
  
  .main {
    display: flex;
@@ -314,12 +322,14 @@
    margin: .5rem;
  }
  button:hover {
-   background-color: #0068a9;
-   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
- }
+     transition: all .2s ease-in-out;
+     background: #fff;
+     color: #010606;
+    }
  
  #checkbox {
    margin: .5rem;
+   text-decoration: none;
  }
  
 #email-input, #sign-up-email-input {
@@ -365,7 +375,7 @@
    padding: .5rem 1rem;
    border: none;
    border-radius: 8px; 
-   font-family: "roboto", sans-serif;
+   /* font-family: "roboto", sans-serif; */
    font-size: 1rem;
    width: 100px;
    height: 2.5rem;
@@ -403,3 +413,91 @@
  .checked {
    position: absolute;
  }
+ 
+ 
+ 
+ /* Mixology CSS */
+ 
+ 
+ .mix-btn {
+    padding: 0.3rem .3rem;
+    background-color: #038ED7;
+    color: #f3f3f3;
+    border: none;
+    border-radius: 8px;
+    font-size: .8rem;
+  }
+ 
+ .mix-btn:hover {
+   transition: all .2s ease-in-out;
+   background: #fff;
+   color: #010606;
+ }
+ 
+ #search-bar {
+   color: #0068a9;
+   margin-right: 10px;
+   width: 150px;
+ }
+ 
+ .drink, .ingredient, .instructions {
+   padding-top: 50px;
+   color: #0068a9;
+ }
+ 
+ .ingredient, .category {
+   font-weight: 300;
+ }
+ 
+ .img {
+   width: 400px;
+   height: 400px;
+   border: 1px solid #0068a9;
+ }
+ 
+  .contain {
+    background-color: lightcyan;
+     max-width: 900px;
+     padding: 2rem 2rem 4rem;
+     margin: 2rem;
+     border-radius: 8px;
+     align-items: center;
+     text-align: center;
+   }
+   .mix-app {
+     background: url("https://raw.githubusercontent.com/Isa-Jer-Li/Pantrillo_backup_finished/main/src/img/try_out.jpeg") no-repeat center;
+     line-height: 1.6;
+     background-attachment: fixed;
+     display: flex;
+     background-size: cover;
+     opacity: .8;
+     padding: .1rem 0 10rem;
+    }
+ 
+ 
+ @media only screen and (max-width: 650px) {
+    .mix-hero {
+    flex-direction: column;
+    align-items: center;
+    }
+  }
+ 
+  .err, .category {
+    color: #F98E04;
+  }
+ 
+ .instructions {
+   color: #b76389;
+   font-weight: 600;
+ }
+ 
+  .poison {
+    color: #b76389;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: .2rem 2.5rem;
+    margin: 1rem;
+    font-size: 50px;
+    cursor: pointer;
+  }

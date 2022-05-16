@@ -28,6 +28,13 @@ const Navbar = ({ toggle }) => {
 						<NavLinks to='/Welcome'>Home</NavLinks>
 
 					</NavItem>
+					
+					<NavItem>
+						<NavLinks to='/Pantry'>
+							Pantry
+						</NavLinks>
+					
+					</NavItem>
 
 					<NavItem>
 						<NavLinks to='/MealPlanner'>

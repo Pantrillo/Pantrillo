@@ -4,9 +4,10 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Popular from '../components/Popular'
 import Welcome from './Welcome'
+import Pantry from './Pantry'
 import FoodJoke from '../components/FoodJoke'
 
-const Home = () => {
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
@@ -23,4 +24,4 @@ const Home = () => {
   )
 }
 
-export default Navbar
+export default Nav
