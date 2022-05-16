@@ -1,6 +1,9 @@
 import Navbar from '../pages/index.js';
 import FoodJoke from '../components/FoodJoke';
 import Footer from '../components/Footer/Footer.jsx';
+import isabelle from '../img/isabelle.png'
+import karl from '../img/karl.jpeg'
+import pierce from '../img/pierce.jpeg'
 {/* youll return html, run JS above */}
 
 function Welcome () {
@@ -9,22 +12,22 @@ function Welcome () {
 	{/* JS end */}
 	return (
 		<div>
-			
+
 			<Navbar />
 
 		<div className= "welc-hero">
 			<h1>Welcome!</h1>
-			
+
 			<div className="row">
 				<a class="welcome-btn" href="#jokediv">About us</a>
 				<a class="welcome-btn" href="#bio">Who we are</a>
 			</div>
-		</div>			
-		
+		</div>
+
 		<div id = "jokediv">
 			<FoodJoke />
 		</div>
-	
+
 
 		<div id="about">
 			<h2>About Pantrillo</h2>
@@ -33,18 +36,31 @@ function Welcome () {
 			</section>
 		</div>
 
-		
-		
-		<div id = "bio">
-	
-			<h3> Pierce </h3>
-	
-			<h3> Isabelle </h3>
-	
-			<h3> Karl </h3>
-	
+
+
+	<div id = "bio">
+	<div id="biggercont">
+	<div className = "name">
+		<a href = "https://github.com/Isa-Jer-Li"> <img className = "isabelle" src = {isabelle} /> </a>
+			<h6> Isabelle Link </h6>
+		<div className = "para">
 		</div>
-	
+	</div>
+	<div className = "name">
+		<a href = "https://github.com/krshinn"> <img className = "karl" src = {karl} /> </a>
+			<h6> Karl Shinn </h6>
+		<div className = "para">
+		</div>
+	</div>
+	<div className = "name">
+		<a href = "https://github.com/piercelawson"> <img className = "pierce" src = {pierce} /> </a>
+			<h6> Pierce Lawson </h6>
+		<div className = "para">
+		</div>
+	</div>
+	</div>
+	</div>
+
 		<Footer />
 
 	</div>

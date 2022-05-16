@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function LogIn(){
   {/* JS start here */}
 
-  // password 
+  // password
   function toggleHidePass(){
     let x = document.getElementById("password-input")
     if (x.type === "password") {
@@ -18,7 +18,7 @@ function LogIn(){
   }
 
   // signup pass
-  function toggleHidePassSignUp() { 
+  function toggleHidePassSignUp() {
     let x = document.getElementById("sign-up-password-input")
     if (x.type === "password") {
   x.type = "text";
@@ -54,53 +54,55 @@ useEffect(() => {
     <div>
 {/* html start here */}
 
-<div className="body"> 
-  
+<div className="body">
+
   {/* <!--   Log in modal begins here --> */}
   <div id="log-in-overlay">
     <div id="log-in-modal">
-        
+
       <h3>Log in information</h3>
-  
+
       <div className="col-center">
         <form action="/login" method="post">
-          <input id="email-input" 
-                  name="email" 
+          <input id="email-input"
+                  name="email"
                   placeholder="Email"/>
           <br />
-          <input id="password-input" 
+          <input id="password-input"
                   name="password"
-                  placeholder="Password"/>
-          <input id="checkbox" 
-                  type ="checkbox" 
-                  onClick = {toggleHidePass} 
+                  placeholder="Password"
+                  type = "password" />
+          <input id="checkbox"
+                  type ="checkbox"
+                  onClick = {toggleHidePass}
                   className = "checked" />
           <br />
           <button id="log-in">Log In</button>
         </form><button id="close-modal-li">Back</button>
-      </div>  
+      </div>
     </div>
   </div>
     {/* <!--  Log in modal ends here --> */}
-    
+
     {/* <!--   Sign Up modal begins here --> */}
   <div id="sign-up-overlay">
     <div id="sign-up-modal">
-      
+
       <h3>Sign Up</h3>
-  
+
       <div className="col-center">
         <form action="/users" method="post">
-          <input id="sign-up-email-input" 
+          <input id="sign-up-email-input"
                 name="email"
                 placeholder="Email"/>
       <br />
-          <input id="sign-up-password-input" 
-                name="password" 
-                placeholder="Password"/>
-          <input id="checkbox" 
+          <input id="sign-up-password-input"
+                name="password"
+                placeholder="Password"
+                type = "password" />
+          <input id="checkbox"
                 type ="checkbox"
-                onClick = {toggleHidePass}
+                onClick = {toggleHidePassSignUp}
                 className = "checked" />
           <br />
           <button id="submit">Submit</button>
@@ -111,10 +113,10 @@ useEffect(() => {
   </div>
   {/* <!--  Sign Up modal ends here --> */}
 
-  
+
 {/* <!-- Log In / Sign Up / Guest Buttons begin here --> */}
   <div className="container-box">
-      
+
         <div className="col-center">
           <div className="logo"></div><br />
           <button id="log-in-button">Log In</button><br />
