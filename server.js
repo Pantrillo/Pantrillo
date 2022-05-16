@@ -8,7 +8,7 @@ const url = "mongodb+srv://krshinn:pickspicks@cluster0.oam60.mongodb.net/myFirst
 const client = new MongoClient(url)
 
 
-app.use(express.static('public'))  //allows you to pass json data from front end to back end
+app.use(express.static('build'))  //allows you to pass json data from front end to back end
 app.use(express.urlencoded({extended:true})) //allows you to access req.body
 
 
@@ -30,17 +30,17 @@ app.post('/users', (req,res) => {
   } //establish credentials as user obj
 
   async function insertUser() {
-	await client.connect()
-	const collection = client.db('test_db').collection('users')
-	await collection.insertOne(user)
-	await client.close()
-  }
-  insertUser()
-  res.redirect('/Welcome.jsx')
-  // may not be the correct link, changed from home.html
-})
-
+	  await client.connect()
+	  const collection = client.db('test_db').collection('users')
+	  await collection.insertOne(user)
+	  await client.close()
+    }
+    console.log(user)
+    insertUser()
+    res.redirect("/welcome")
+  })
 //function to verify log-in data
+
 app.post('/login', (req,res) => {
 
   let user = {
@@ -48,19 +48,20 @@ app.post('/login', (req,res) => {
 	password: req.body.password,
   } //establish credentials as user obj
 
-
   async function verifyUser() {
-  await client.connect()
-  const collection = client.db('test_db').collection('users')
-  let findUser = await collection.findOne(user)
-  console.log(findUser)
-  await client.close()
-	if (findUser !== null) {
-	  res.redirect('/welcome')
-	} else {
-	  res.redirect('/index.html')
-	}
+
+    await client.connect()
+    const collection = client.db('test_db').collection('users')
+    let findUser = await collection.findOne(user)
+    await client.close()
+    console.log(user)
+	  if (findUser !== null) {
+	    res.redirect("/welcome")
+	  } else {
+	    res.redirect("/")
+	  }
   }
+    console.log(user)
   verifyUser()
 })
 // log in/sign up end here
@@ -88,6 +89,11 @@ app.get('/api', (req,res) => {
 	}
   }
   postRecipe()
+})
+
+
+  app.get('*', (req,res)=> {
+  res.sendFile(__dirname + "/build/index.html")
 })
 
 

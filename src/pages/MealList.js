@@ -3,11 +3,12 @@ import Meal from "./Meal";
 
 export default function MealList({mealData}) {
 	const nutrients = mealData.nutrients;
+	
 	return(
-		<main>
+		<div className="main">
 			<section className="nutrients">
 				<h1>Macros</h1>
-				<ul>
+				<ul id="macros">
 					<li>Calories: {nutrients.calories.toFixed(0)}</li>
 					<li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
 					<li>Fat: {nutrients.fat.toFixed(0)}</li>
@@ -20,6 +21,6 @@ export default function MealList({mealData}) {
 					})
 				}
 			</section>
-		</main>
+		</div>
 	)
 }

@@ -1,17 +1,14 @@
 import {useEffect} from 'react'
-import './LogIn.css'
+import Welcome from './Welcome';
+import { Link } from 'react-router-dom';
 
-/* Isabelle commented out, need to give button fnction - look @ discord for more info */
-/* const button = document.createElement('Home');
+{/* import LogIn from "LogIn"; */}
 
-button.addEventListener('click', event => {
-  button.textContent = `Click count: ${event.detail}`;
-}); */
-
-function LogIn() {
+function LogIn(){
+  {/* JS start here */}
 
   // password
-  function toggleHidePass() {
+  function toggleHidePass(){
     let x = document.getElementById("password-input")
     if (x.type === "password") {
   x.type = "text";
@@ -49,83 +46,77 @@ useEffect(() => {
   })
 }, [])
 
+
+{/* JS start here */}
   return (
 <div className="body">
     {/* <div id = "lgImg"> */}
+  {/* <!--   Log in modal begins here --> */}
+  <div id="log-in-overlay">
+    <div id="log-in-modal">
+      <h3>Log in information</h3>
 
-    <div id="log-in-overlay">
-      <div id="log-in-modal">
-          <div className = "log">
-            <div className = "lgin">
-        <h2>Log in information</h2>
-              </div>
-{/* change h2 */}
-
-      <div className="row-center">
-          <form action="/login" method="post">
-            <input id="email-input" name="email" placeholder="Email" />
-            <br />
-
-            <input id="password-input" name="password" placeholder="Password" type = "password" />
-            <input type ="checkbox" onClick = {toggleHidePass} className = "checked" />
-        <br />
-        <button id="log-in">Log In</button>
-        </form>
-     </div>
-        <button id="close-modal-li">Back</button>
+      <div className="col-center">
+        <form action="/login" method="post">
+          <input id="email-input"
+                  name="email"
+                  placeholder="Email"/>
           <br />
-        <div id="error"></div>
+          <input id="password-input"
+                  name="password"
+                  placeholder="Password"
+                  type = "password" />
+          <input id="checkbox"
+                  type ="checkbox"
+                  onClick = {toggleHidePass}
+                  className = "checked" />
+          <br />
+          <button id="log-in">Log In</button>
+        </form><button id="close-modal-li">Back</button>
       </div>
     </div>
+  </div>
+    {/* <!--  Log in modal ends here --> */}
 
+    {/* <!--   Sign Up modal begins here --> */}
   <div id="sign-up-overlay">
     <div id="sign-up-modal">
-      <div className = "lgin">
-     <h2>Sign Up</h2>
-          </div>
-{/* change h2 */}
-      <div className="row-center">
-        <form action="/users" method="post">
-          <input id="sign-up-email-input" name="email" placeholder="Email" />
-          <br />
-          <input id="sign-up-password-input" name="password" placeholder="Password" type = "password" />
-          <input type ="checkbox" onClick = {toggleHidePassSignUp} className = "checked" />
-      <br />
-      <button id="submit">Submit</button>
-      </form>
-  </div>
-      <button id="close-modal-su">Back</button>
+      <h3>Sign Up</h3>
 
+      <div className="col-center">
+        <form action="/users" method="post">
+          <input id="sign-up-email-input"
+                name="email"
+                placeholder="Email"/>
+      <br />
+          <input id="sign-up-password-input"
+                name="password"
+                placeholder="Password"
+                type = "password" />
+          <input id="checkbox"
+                type ="checkbox"
+                onClick = {toggleHidePassSignUp}
+                className = "checked" />
+          <br />
+          <button id="submit">Submit</button>
+        </form>
+          <button id="close-modal-su">Back</button>
+      </div>
     </div>
   </div>
-</div>
-
+{/* <!-- Log In / Sign Up / Guest Buttons begin here --> */}
   <div className="container-box">
 
-      <h1>Pantrillo</h1>
-        <div className="row-center">
-          <div className="logo"></div>
-        </div>
-        <br />
-
-      <div className="row-center">
-        <a href="/welcome"><button id="log-in-button"><h4>Log In</h4></button></a>
-    </div>
-
-
-      <div className="row-center">
-        <button id="sign-up-button"><h4>Sign Up</h4></button>
-      </div>
-
-
-      <div className="row-center">
-        <a href="/welcome"><button className="Guest"><h4>Guest</h4></button></a>
+        <div className="col-center">
+          <div className="logo"></div><br />
+          <button id="log-in-button">Log In</button><br />
+        <button id="sign-up-button">Sign Up</button><br />
+        <Link to="/Welcome"><button id="guest">Guest</button></Link>
       </div>
   </div>
+{/* <!-- Log In / Sign Up / Guest Buttons end here --> */}
+</div>
 
-
-{/* html end here */}
-    </div>
   )
 
 }
