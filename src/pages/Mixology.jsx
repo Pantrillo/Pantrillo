@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Footer from '../components/Footer/Footer.jsx';
-import Navbar from '../pages/index.js';
+import Nav from '../pages/index.js';
 
 function Mixology() {
 	  const [cocktails, setCocktails] = useState([])
@@ -28,8 +28,8 @@ function Mixology() {
 			}
   return (
 	<div>
-		<Navbar />
-				<div className = "mix-app">
+		<Nav />
+				<div className = "Appoli">
 			<div className= "contain">
 		<h1 className = "poison"> Select your poison 🍹 </h1>
 		   <input id = "search-bar" />

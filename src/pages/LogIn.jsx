@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect} from 'react';
 import Welcome from './Welcome';
 import { Link } from 'react-router-dom';
 

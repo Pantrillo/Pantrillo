@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()  //create new express app
-const port = 5000;  //using designated port number on front end to access back end
+const port = 5001;  //using designated port number on front end to access back end
 // run server on specific port(5001), and the front end/index on port(3000), when ready to merge and run them together - consolidate with Canon
 
 const {MongoClient} = require('mongodb')  //create a new mongoDB client
@@ -75,13 +75,13 @@ app.get('/api', (req,res) => {
   await client.connect()
   const collection = client.db('test_db').collection('test_recipe')
 
-  let findIngredients = await collection.find(
-  { searchedIngredients: { $all: ingredients } } ).toArray()
+  let findRecipe = await collection.findOne(
+  { searchedIngredients: { $all: ingredients } } )
 
   await client.close()
-	if (findIngredients !== null) {
-	  console.log(findIngredients)
-	  res.send(findIngredients)
+	if (findRecipe !== null) {
+	  console.log(findRecipe)
+	  res.send(findRecipe)
 	} else {
 	  console.log('error')
 	  res.sendStatus(400)

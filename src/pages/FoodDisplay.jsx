@@ -1,105 +1,61 @@
-import React, {useState, useEffect} from 'react';
-import './Pantry.css';
+import React, {useState} from 'react';
+import {PantryModal} from './PantryModal';
 
 
-export default function Pantry() {
-  //const [ingredientData, setIngredientData] = useState(""); //set to null default
+export default function FoodDisplay() {
+  const [showModal, setShowModal] = useState(false); //set to false default
+  const [title, setTitle] = useState(""); 
+  const [ingredients, setIngredients] = useState("");
+  const [nutrition, setNutrition] = useState("");
+  const [prep, setPrep] = useState("");
+  const [time, setTime] = useState("");
+  const [imgSrc, setImgSrc] = useState("");
+  const [error, setError] = useState("");
   
-  /* useEffect(() => {
-		document.getElementById("pantry-btn").addEventListener("click", function() {
-	  	document.getElementById("recipe-overlay").style.display= "block"
-		})
-  	
-		document.getElementById("close-modal-pantry").addEventListener("click", function() {
-	  	document.getElementById("recipe-overlay").style.display= "none"
-		})
-	}, []) */
   
-	async function sendIngredients() {
+  function setShowModalHelper() {
+	  setShowModal(false)
+  }
+  
+  
+  async function sendIngredients() {
+	
+	let values = []
+	let checkboxes = document.querySelectorAll('input:checked')
 	  
-	  let values = []
-	  let checkboxes = document.querySelectorAll('input:checked')
-		
-		checkboxes.forEach((checkbox) => { 
-		values.push(checkbox.value)
-		})
-		
-		values.join(',')
-		console.log(values)
+	  checkboxes.forEach((checkbox) => { 
+	  values.push(checkbox.value)
+	  })
 	  
+	  values.join(',')
+	  console.log(values)
 	  
-		  const title = document.getElementById('title')
-		  const ingredients = 
-		   document.getElementById('ingredients')
-		  const nutrition = document.getElementById('nutrition')
-		  const prep = document.getElementById('prep')
-		  const time = document.getElementById('time')
-		  const error = document.getElementById('error')
 		
-		  title.innerHTML = ""
-		  ingredients.innerHTML = ""
-		  nutrition.innerHTML = ""
-		  prep.innerHTML = ""
-		  time.innerHTML = ""
-		  document.getElementById('image').src = ""
+	   try{
+		 const url = "/api?ingredients=" + values
+		 const rawRes = await fetch(url)
+		 const rawResJSON = await rawRes.json()
 		  
-		 try{
-		   const url = "/api?ingredients=" + values
-		   const rawRes = await fetch(url)
-		   const rawResJSON = await rawRes.json()
+		setTitle(rawResJSON.title)
+		setTime(rawResJSON.time)
+		setImgSrc(rawResJSON.img)
+		setIngredients(rawResJSON.ingredients)
+		setNutrition(rawResJSON.nutrition)
+		setPrep(rawResJSON.prep)
+		setError("")
+		setShowModal(true) //setting modal
+		} 
 		
-			
-			for (let i = 0; i < rawResJSON.length; i++) {
-			  if (rawResJSON[i] != null) {
-			  
-			  title.innerHTML += `<div id="title-cont"> ${rawResJSON[i].title} </div>`
-				
-			  time.innerHTML += `<div id="time-cont"> ${rawResJSON[i].time} </div>`
-				
-				
-			  for (let x = 0; x < rawResJSON[i].nutrition.length; x++) {
-				nutrition.innerHTML += `
-				  <div id="nutrition-cont">
-				  <ul><li>${rawResJSON[i].nutrition[x]}</li></ul>
-				  </div>
-				  `
-				} 
-				
-		  
-			  for (let y = 0; y < rawResJSON[i].prep.length; y++) {
-				prep.innerHTML += `
-				  <div id="prep-cont">
-				  <p>${rawResJSON[i].prep[y]}</p>
-				  </div>
-				  `
-				}
-		  
-		  
-				for (let z = 0; z < rawResJSON[i].ingredients.length; z++) {
-				ingredients.innerHTML += `
-				  <div id="nutrition-cont">
-				  <ul><li> ${rawResJSON[i].ingredients[z]} </li></ul>
-				  </div>
-				  `
-				}
-		  
-				document.getElementById('image').src = rawResJSON[i].img
-			  } 
-		  }
-		  }
-		  
-		  catch {
-			console.log('err')
-			error.innerText = "There are no recipies that fit your search"
-		  }
-		
+		catch {
+		  console.log('err')
+		  setShowModal(false)
+		  setError("There are no recipies that fit your search")
 		}
+	}
 	  
 	
 	return (
 		<div>
-			
-		<form className="food-disp" action="/api" method="post">
 
 				<h2>Protein:</h2>
 				<div className = "pantry-wrapper">
@@ -256,38 +212,11 @@ export default function Pantry() {
 					   </div>
 				</div>
 				
-			<button className="pantry-btn" onClick={sendIngredients}>Generate recipes </button>
-
-		</form>
-		
-		
-		
-		<div className="recipe-cont">
+			<button className="pantry-btn" onClick={sendIngredients}>Generate recipes</button>
 			
-		
-			<div classname="recipe-head">
-				  <div id="title"></div>
-				<div id="time"></div>
-			</div>
-		
-			<div className="recipe-img">
-				  <img id="image" src=""></img>
-				<div id="nutrition"></div>
-			</div>
-		
-			<div className="recipe-prep">
-				  <div id="ingredients"></div>
-				  <div id="prep"></div>
-			</div>
-		
-				<div id="error"></div>
-		
-		</div>
-
-		
-	</div>
-
+			<div id="error">{error}</div>
+			
+			{showModal ? <PantryModal showModal={showModal} setShowModalHelper={setShowModalHelper} title={title} time={time} nutrition={nutrition} prep={prep} ingredients={ingredients} imgSrc={imgSrc}/> : null}
 	
-
-)
-}
+	</div>	
+)}
